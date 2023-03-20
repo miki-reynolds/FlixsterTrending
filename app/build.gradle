@@ -20,11 +20,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        defaultConfig {
-            Properties properties = new Properties()
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-            manifestPlaceholders = [API_KEY: "${properties.getProperty('API_KEY')}"]
-        }
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        manifestPlaceholders = [API_KEY: "${properties.getProperty('API_KEY')}"]
 
     }
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentDetailLayout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:scaleType="centerCrop">
+
+    <ImageView
+        android:id="@+id/detail_media_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintDimensionRatio="9:9"
+        android:contentDescription="@string/media_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+    <TextView
+        android:id="@+id/detail_media_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/material_dynamic_neutral_variant90"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_media_image"
+        tools:text="ATTACK ON TITAN" />
+
+    <TextView
+        android:id="@+id/detail_media_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/overview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        android:textColor="@color/material_dynamic_neutral_variant90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_media_title"
+        android:textSize="17sp"
+        android:maxLines="13"
+        android:scrollbars="vertical"
+        tools:text="Attack on Titan is set in a world where humanity lives inside cities surrounded
+        by enormous Walls that protect them from Titans, gigantic humanoid creatures who devour
+        humans seemingly without reason. The story centers around Eren Jaeger and his childhood
+        friends Mikasa Ackermann and Armin Arlelt whose lives are changed forever after the appearance
+        of a Colossal Titan, which brings about the destruction of their home town and the death of
+        Eren's mother. Vowing revenge and to reclaim the world from the Titans, Eren, Mikasa, and
+        Armin join the Scout Regiment, an elite group of soldiers who fight Titans outside the Walls."
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+For a variety of aesthetic white colors and fonts, you can check out Google Fonts (https://fonts.google.com/) and Material Design (https://material.io/design/color/the-color-system.html#tools-for-picking-colors). Here are a few examples:
+
+Aesthetic white colors: #F8F8FF, #F5F5F5, #ECEFF1
+Aesthetic fonts: Montserrat, Roboto, Lato, Open Sans, Raleway, Source Sans Pro, Ubuntu, etc.
+-->

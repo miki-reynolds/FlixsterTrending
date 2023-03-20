@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/nowTrendingMoviesCaption"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="7dp"
+        android:maxLines="1"
+        android:text="@string/trending_movies_this_week"
+        android:textSize="23sp"
+        android:textColor="@color/material_dynamic_neutral_variant90"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="TRENDING MOVIES THIS WEEK" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieList"
+        android:name="com.kaisha.flizsterx.NowTrendingMovies"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toBottomOf="@+id/nowTrendingMoviesCaption"
+        app:layout_constraintBottom_toTopOf="@+id/showList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="horizontal"
+        tools:context=".NowTrendingFragment"
+        tools:listitem="@layout/item_media" />
+
+    <TextView
+        android:id="@+id/nowTrendingShowsCaption"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/movieList"
+        app:layout_constraintBottom_toTopOf="@+id/showList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="7dp"
+        android:maxLines="1"
+        android:text="@string/trending_shows_this_week"
+        android:textSize="23sp"
+        android:textColor="@color/material_dynamic_neutral_variant90"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:gravity="center"
+        tools:text="TRENDING SHOWS THIS WEEK" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/showList"
+        android:name="com.kaisha.flizsterx.NowTrendingShows"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nowTrendingShowsCaption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbars="horizontal"
+        tools:context=".NowTrendingFragment"
+        tools:listitem="@layout/item_media" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:theme="@style/Widget.AppCompat.ProgressBar"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

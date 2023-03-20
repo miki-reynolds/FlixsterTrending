@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">FlixsterTrending</string>
     <string name="api_key">${API_KEY}</string>
+    <string name="media_image">media image</string>
+    <string name="title">Title</string>
+    <string name="overview">Overview</string>
+    <string name="trending_movies_this_week">TRENDING MOVIES THIS WEEK</string>
+    <string name="trending_shows_this_week">TRENDING SHOWS THIS WEEK</string>
 </resources>
